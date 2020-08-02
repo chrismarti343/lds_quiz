@@ -1,0 +1,126 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded;
+  }
+  
+  :root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+  }
+  
+  body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 50%);
+  }
+  
+  body.correct {
+    --hue: var(--hue-correct);
+  }
+  
+  body.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
+  .container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px 2px;
+    font-size: 2.5rem;
+  }
+  
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 40px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 15px 5px;
+    color: white;
+    outline: none;
+    font-size: 2.5rem;
+  }
+  
+  .btn:hover {
+    border-color: yellow;
+    border-style: double;;
+
+  }
+  
+  .btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+  }
+  
+  .btn.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
+  .start-btn {
+    font-size: 4.0rem;
+    font-weight: bold;
+    padding: 10px 40px;
+  }
+  
+  .next-btn {
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding: 10px 40px;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hide {
+    display: none;
+  }
+
+  .bottomright {
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    font-size: 18px;
+  }
+
+  .home-btm {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 10px 40px;
+    color: #09F1B5;
+    background-color: #0B547B;
+    border-radius: 10px;
+  }
+
+  input[type="text" i] {
+    padding: 8px 9px;
+}
+
+label {
+  display: inline-block;
+  min-width: 120px;
+  text-align: right;
+}
+
+.inputname {
+  margin: 40px;
+  text-align: center;
+}
